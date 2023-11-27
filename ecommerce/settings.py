@@ -134,25 +134,3 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 RAZOR_KEY_ID = "rzp_test_d95B4ZD82zJGp5"
 RAZOR_KEY_SECRET = "sALpjEPj6njABAtdmqV8hNJs"
-
-# Secret key settings
-with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
-    SECRET_KEY = f.read().strip()
-
-# HTTPS Settings
-
-
-# HSTS settings
-
-SECURE_HSTS_PRELOAD = True
-CORS_REPLACE_HTTPS_REFERER = False
-HOST_SCHEME = "https://"
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = False
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
-SECURE_HSTS_SECONDS = None
-SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-SECURE_FRAME_DENY = False
-
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
